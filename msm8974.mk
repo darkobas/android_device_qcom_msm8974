@@ -51,12 +51,11 @@ PRODUCT_PACKAGES += \
 #fstab.qcom
 PRODUCT_PACKAGES += fstab.qcom
 
-#wlan driver
-PRODUCT_COPY_FILES += \
-    device/qcom/msm8974/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-    device/qcom/msm8974/WCNSS_qcom_wlan_nv.bin:persist/WCNSS_qcom_wlan_nv.bin
-
 PRODUCT_PACKAGES += \
+    libwpa_client \
+    hostapd \
+    dhcpcd.conf \
+    wpa_supplicant \
     wpa_supplicant_overlay.conf \
     p2p_supplicant_overlay.conf
 
