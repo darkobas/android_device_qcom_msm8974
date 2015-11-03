@@ -53,9 +53,6 @@ PRODUCT_PACKAGES += fstab.qcom
 
 PRODUCT_PACKAGES += \
     libwpa_client \
-    hostapd \
-    dhcpcd.conf \
-    wpa_supplicant \
     wpa_supplicant_overlay.conf \
     p2p_supplicant_overlay.conf
 
