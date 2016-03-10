@@ -9,12 +9,6 @@ endif #TARGET_USES_QCOM_BSP
 #TARGET_DISABLE_DASH := true
 #TARGET_DISABLE_OMX_SECURE_TEST_APP := true
 
-# media_profiles and media_codecs xmls for 8974
-ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
-PRODUCT_COPY_FILES += \
-     device/qcom/msm8974/media/media_codecs_8974.xml:system/etc/media_codecs.xml
-endif  #TARGET_ENABLE_QC_AV_ENHANCEMENTS
-
 $(call inherit-product, device/qcom/common/common.mk)
 
 PRODUCT_NAME := msm8974
@@ -22,8 +16,6 @@ PRODUCT_DEVICE := msm8974
 
 # Audio configuration file
 PRODUCT_COPY_FILES += \
-    device/qcom/msm8974/audio_policy.conf:system/etc/audio_policy.conf \
-    device/qcom/msm8974/mixer_paths.xml:system/etc/mixer_paths.xml \
     device/qcom/msm8974/mixer_paths_auxpcm.xml:system/etc/mixer_paths_auxpcm.xml
 
 PRODUCT_PACKAGES += \
